@@ -15,6 +15,7 @@ function esMayorDeEdad(edad) {
 	// Recibe un número representando la edad de una persona.
 	// Devuelve true si la edad es mayor o igual a 18, false en caso contrario.
 	// Tu código:
+	return edad >= 18;
 }
 
 // Test 2:
