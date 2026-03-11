@@ -374,6 +374,17 @@ function obtenerPrimerosN(array, n) {
 	// NO uses .slice(), hazlo con un bucle.
 	// Ejemplo: obtenerPrimerosN([1,2,3,4,5], 3) → [1,2,3]
 	// Tu código:
+			if (n <= 0) {
+		return []
+	}
+
+	let resultado = []
+
+	for (let i = 0; i < n && i < array.length; i++) {
+		resultado.push(array[i])
+	}
+
+	return resultado
 }
 
 // ██████  NO MODIFICAR DESDE AQUÍ ███████████
