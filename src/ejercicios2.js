@@ -51,13 +51,13 @@ function calcularDescuento(precio, esMiembro, esFinDeSemana) {
 	// - Si no cumple ninguna: sin descuento (0%)
 	// Devuelve el precio final después de aplicar el descuento.
 	// Tu código:
-	let descuento = 0;
+	let descuento = 0
 
 	if (esMiembro && esFinDeSemana) {
-		descuento = 0.30;
+		descuento = 0.30
 	} 
 	else if (esMiembro || esFinDeSemana) {
-		descuento = 0.15;
+		descuento = 0.15
 	}
 
 	let precioFinal = precio - (precio * descuento);
@@ -75,28 +75,28 @@ function obtenerDiaSemana(numero) {
 			switch (numero) {
 
 		case 1:
-			return "Lunes";
+			return "Lunes"
 
 		case 2:
-			return "Martes";
+			return "Martes"
 
 		case 3:
-			return "Miércoles";
+			return "Miércoles"
 
 		case 4:
-			return "Jueves";
+			return "Jueves"
 
 		case 5:
-			return "Viernes";
+			return "Viernes"
 
 		case 6:
-			return "Sábado";
+			return "Sábado"
 
 		case 7:
-			return "Domingo";
+			return "Domingo"
 
 		default:
-			return "Día inválido";
+			return "Día inválido"
 	}
 
 }
@@ -110,14 +110,14 @@ function esAnioBisiesto(anio) {
 	// Ejemplos: 2000 → true, 1900 → false, 2024 → true, 2023 → false
 	// Tu código:
 			if (anio % 4 === 0 && anio % 100 !== 0) {
-		return true;
+		return true
 	}
 
 	if (anio % 400 === 0) {
-		return true;
+		return true
 	}
 
-	return false;
+	return false
 
 }
 
@@ -137,11 +137,11 @@ function validarContraseña(password) {
 		return false;
 	}
 
-	let tieneMayuscula = /[A-Z]/.test(password);
-	let tieneNumero = /[0-9]/.test(password);
+	let tieneMayuscula = /[A-Z]/.test(password)
+	let tieneNumero = /[0-9]/.test(password)
 
-	return tieneMayuscula && tieneNumero;
-	
+	return tieneMayuscula && tieneNumero
+
 }
 
 // Test 7:
@@ -154,6 +154,22 @@ function calcularIMC(peso, altura) {
 	// - 25 <= IMC < 30 → "Sobrepeso"
 	// - IMC >= 30 → "Obesidad"
 	// Tu código:
+		let imc = peso / (altura * altura);
+
+	if (imc < 18.5) {
+		return "Bajo peso"
+	}
+
+	if (imc < 25) {
+		return "Peso normal"
+	}
+
+	if (imc < 30) {
+		return "Sobrepeso"
+	}
+
+	return "Obesidad"
+
 }
 
 // Test 8:
