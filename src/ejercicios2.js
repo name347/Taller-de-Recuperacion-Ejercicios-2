@@ -278,6 +278,17 @@ function formatearNombre(nombre, apellido, mayusculas) {
 	// Ejemplo: formatearNombre("juan", "perez", true) → "JUAN PEREZ"
 	// Ejemplo: formatearNombre("juan", "perez", false) → "Juan Perez"
 	// Tu código:
+	if (mayusculas) {
+		return (nombre + " " + apellido).toUpperCase()
+	}
+
+	let nombreFormateado =
+		nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase()
+
+	let apellidoFormateado =
+		apellido.charAt(0).toUpperCase() + apellido.slice(1).toLowerCase()
+
+	return nombreFormateado + " " + apellidoFormateado
 }
 
 // ██████  BUCLES BÁSICOS ████████████████████████
@@ -289,6 +300,13 @@ function sumarHasta(limite) {
 	// Ejemplo: sumarHasta(5) → 1+2+3+4+5 = 15
 	// Usa un bucle for o while.
 	// Tu código:
+			let suma = 0;
+
+	for (let i = 1; i <= limite; i++) {
+		suma += i
+	}
+
+	return suma
 }
 
 // Test 15:
