@@ -28,18 +28,18 @@ function clasificarTriangulo(lado1, lado2, lado3) {
 	// - "No es triángulo" si no cumple la propiedad triangular
 	// Tu código:
 		if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) {
-		return "No es triángulo";
+		return "No es triángulo"
 	}
 
 	if (lado1 === lado2 && lado2 === lado3) {
-		return "Equilátero";
+		return "Equilátero"
 	}
 
 	if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-		return "Isósceles";
+		return "Isósceles"
 	}
 
-	return "Escaleno";
+	return "Escaleno"
 }
 
 // Test 3:
@@ -51,6 +51,18 @@ function calcularDescuento(precio, esMiembro, esFinDeSemana) {
 	// - Si no cumple ninguna: sin descuento (0%)
 	// Devuelve el precio final después de aplicar el descuento.
 	// Tu código:
+	let descuento = 0;
+
+	if (esMiembro && esFinDeSemana) {
+		descuento = 0.30;
+	} 
+	else if (esMiembro || esFinDeSemana) {
+		descuento = 0.15;
+	}
+
+	let precioFinal = precio - (precio * descuento);
+
+	return precioFinal;
 }
 
 // Test 4:
