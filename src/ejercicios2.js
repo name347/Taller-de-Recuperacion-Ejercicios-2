@@ -385,6 +385,7 @@ function obtenerPrimerosN(array, n) {
 	}
 
 	return resultado
+	
 }
 
 // ██████  NO MODIFICAR DESDE AQUÍ ███████████
